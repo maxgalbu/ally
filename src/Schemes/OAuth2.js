@@ -149,6 +149,19 @@ class OAuth2 {
   }
 
   /**
+   * Allow to dynamically set the redirect URI of the driver.
+   *
+   * @method setRedirectUri
+   *
+   * @param {String} redirectUri
+   *
+   * @return {void}
+   */
+  setRedirectUri(redirectUri) {
+    this._redirectUri = redirectUri;
+  }
+
+  /**
    * Returns a formatted url to be used for redirecting
    * users.
    *

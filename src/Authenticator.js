@@ -112,6 +112,25 @@ class Authenticator {
   }
 
   /**
+   * Allow to dynamically set redirect URI of the driver.
+   * This function needs to be called every time the driver is instantiated.
+   *
+   * Example:
+   * ally.driver("facebook").setRedirectUri(redirectUri).getUrl()
+   * ally.driver("facebook").setRedirectUri(redirectUri).getUser()
+   *
+   * @method setRedirectUri
+   *
+   * @param {String} redirectUri
+   *
+   * @return {Authenticator}
+   */
+  setRedirectUri(redirectUri) {
+    this._driverInstance.setRedirectUri(redirectUri );
+    return this;
+  }
+
+  /**
    * Redirects request to the provider website url.
    *
    * @method redirect
